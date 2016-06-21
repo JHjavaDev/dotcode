@@ -1,0 +1,34 @@
+body {
+  text-align: center;
+  margin: auto;
+  background: #000;
+  font: 100% Helvetica, sans-serif;
+  color: #fff; }
+  body #introduction {
+    transform: translate(50%, 0%);
+    width: 50%; }
+  body #instructions {
+    transform: translate(50%, 0%);
+    width: 50%; }
+  body #select {
+    transform: translate(50%, 0%);
+    width: 50%; }
+  body #codeexample {
+    transform: translate(50%, 0%);
+    width: 50%;
+    color: #bbb;
+    font: 100%, Helvetica, sans-serif; }
+  body #input {
+    transform: translate(50%, 0%);
+    border-style: dotted;
+    border-color: #fff;
+    width: 50%;
+    height: 100%; }
+  body #output {
+    transform: translate(50%, 0%);
+    border-style: dotted;
+    border-color: #fff;
+    width: 50%;
+    height: 100%; }
+
+/*# sourceMappingURL=style.css.map */

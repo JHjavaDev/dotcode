@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<title>.code</title>
+	</head>
+	<body>
+		<div id="header">
+			<p>
+				<h1>Sandbox</h1>
+			</p>
+		</div>
+
+		<div id="instructions">
+			<p>
+				Sandbox: "A testing environment that isolates untested code changes and outright experimentation from the production environment or repository." (Wikipedia)
+			</p>
+		</div>
+
+		<br><br>
+
+		<div id="ide">
+			Input <br>
+			<div id="input">
+				<button onclick="run()">Run</button>
+				<br>
+				<textarea cols="80" rows="10" placeholder="code" value="" id="code"></textarea>
+			</div>
+
+			<br>
+			Output <br>
+			<div id="output">
+				<br>
+			</div>
+			<script src="../js/ide.js"></script>
+		</div>
+
+		<div id="select">
+			<br>
+			<a href="index.html">Home</a>
+		</div>
+	</body>
+</html>
