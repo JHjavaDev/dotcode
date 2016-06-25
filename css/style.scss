@@ -1,13 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 $background-color: #000;
-$font-stack: Helvetica, sans-serif;
 $primary-color: #fff;
+$code-color: #999;
+
+$font-size: 16px;
 
 body {
+	font-family: Roboto Condensed;
+	font-size: $font-size;
 	text-align: center;
 	margin: auto;
 	background: $background-color;
-	font: 100% $font-stack;
 	color: $primary-color;
+
+	h1 {
+		font-family: Roboto;
+	}
 
 	#introduction {
 		transform: translate(50%, 0%);
@@ -21,12 +31,6 @@ body {
 	#select {
 		transform: translate(50%, 0%);
 		width: 50%;
-	}
-	#codeexample {
-		transform: translate(50%, 0%);
-		width: 50%;
-		color: #bbb;
-		font: 100%, Helvetica, sans-serif;
 	}
 
 	#input {
@@ -43,4 +47,11 @@ body {
 		width: 50%;
 		height: 100%;
 	}
+}
+
+.code-example {
+	font-family: Monospace;
+	transform: translate(50%, 0%);
+	width: 50%;
+	color: $code-color;
 }
