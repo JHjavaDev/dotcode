@@ -1,0 +1,46 @@
+$background-color: #000;
+$font-stack: Helvetica, sans-serif;
+$primary-color: #fff;
+
+body {
+	text-align: center;
+	margin: auto;
+	background: $background-color;
+	font: 100% $font-stack;
+	color: $primary-color;
+
+	#introduction {
+		transform: translate(50%, 0%);
+		width: 50%;
+	}
+
+	#instructions {
+		transform: translate(50%, 0%);
+		width: 50%;
+	}
+	#select {
+		transform: translate(50%, 0%);
+		width: 50%;
+	}
+	#codeexample {
+		transform: translate(50%, 0%);
+		width: 50%;
+		color: #bbb;
+		font: 100%, Helvetica, sans-serif;
+	}
+
+	#input {
+  		transform: translate(50%, 0%);
+		border-style: dotted;
+		border-color: $primary-color;
+		width: 50%;
+		height: 100%;
+	}
+	#output {
+  		transform: translate(50%, 0%);
+		border-style: dotted;
+		border-color: $primary-color;
+		width: 50%;
+		height: 100%;
+	}
+}

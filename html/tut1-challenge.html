@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<title>.code</title>
+	</head>
+	<body>
+		<div id="header">
+			<p>
+				<h1>Tutorial 1 - Challenge: Calculator</h1>
+			</p>
+		</div>
+
+		<div id="instructions">
+			<p>
+				Now it is time to use the things you have learned. Use what you have learned from the previous tutorials to make a calculator that adds and subtracts number.
+			</p>
+			<p>
+				It should take three inputs (<i id="codeexample">a</i>, <i id="codeexample">b</i> and <i id="codeexample">c</i>).
+			</p>
+			<p>
+				The output should be "(a)+(b)-(c)=" and on the next line the answer.
+			</p>
+			<p>
+				When the inputs are 
+				<br>
+				24, 53, 37
+				<br>
+				the output should be
+				<br>
+				24+53-37=
+				<br>
+				40
+			</p>
+		</div>
+
+		<br>
+
+		<div id="ide">
+			Input <br>
+			<div id="input">
+				<button onclick="run()">Run</button>
+				<br>
+				<textarea cols="80" rows="10" placeholder="code" value="" id="code"></textarea>
+			</div>
+
+			<br>
+			Output <br>
+			<div id="output">
+				<br>
+			</div>
+			<script src="../js/ide.js"></script>
+		</div>
+
+		<br>
+		<script language="javascript"> 
+	    function toggle() {
+	    	var ele = document.getElementById("toggleText");
+	    	var text = document.getElementById("displayText");
+	    	if(ele.style.display == "block") {
+	        	ele.style.display = "none";
+	    		text.innerHTML = "Show Answer";
+	      	} else {
+	    		ele.style.display = "block";
+	    		text.innerHTML = "Hide Answer";
+	    	}
+	    } 
+	    </script>
+	    <a id="displayText" href="javascript:toggle();">Show Answer</a>
+	    <div id="toggleText" style="display: none">
+			variable a 24
+			<br>
+			variable b 53
+			<br>
+			variable c 37
+			<br>
+			output (a)
+			<br>
+			output +
+			<br>
+			output (b)
+			<br>
+			output -
+			<br>
+			output (c)
+			<br>
+			output =
+			<br>
+			newline
+			<br>
+			add (b) (a) (b)
+			<br>
+			subtract (c) (b) (c)
+			<br>
+			output (c)
+			<br>
+	    </div>
+
+		<div id="select">
+			<br>
+			<a href="../index.html">Home</a>
+			<br>
+			<a href="tut1-5.html">Previous</a>
+			<a>Next</a>
+		</div>
+	</body>
+</html>
