@@ -6,48 +6,50 @@
 		<title>.code</title>
 	</head>
 	<body>
-		<div id="header">
-			<p>
-				<h1>Tutorial 1 - 1: Hello World</h1>
-			</p>
-		</div>
+		<div class="container-fluid text-center">
+			<div id="header">
+				<p>
+					<h1>Tutorial 1 - 1: Hello World</h1>
+				</p>
+			</div>
 
-		<div id="instructions">
-			<p>
-				It is a long tradition in programing to begin by writing a "Hello World" program.
-			</p>
-			<p>
-				In the .code language the <i class="code-example">output</i> command is used to output anything to the output section of the site. To try this, just type <i class="code-example">output</i>, then a space and then any text without spaces. To write your "Hello World" program just type <i class="code-example">output Hello_World</i>
-			</p>
-			<p>
-				The output of this program should be "Hello_World"
-			</p>
-		</div>
-
-		<br>
-
-		<div id="ide">
-			Input <br>
-			<div id="input">
-				<button onclick="run()">Run</button>
-				<br>
-				<textarea cols="80" rows="10" placeholder="code" value="" id="code"></textarea>
+			<div id="instructions">
+				<p>
+					It is a long tradition in programing to begin by writing a "Hello World" program.
+				</p>
+				<p>
+					In the .code language the <i class="code-example">output</i> command is used to output anything to the output section of the site. To try this, just type <i class="code-example">output</i>, then a space and then any text without spaces. To write your "Hello World" program just type <i class="code-example">output Hello_World</i>
+				</p>
+				<p>
+					The output of this program should be "Hello_World"
+				</p>
 			</div>
 
 			<br>
-			Output <br>
-			<div id="output">
-				<br>
-			</div>
-			<script src="../js/ide.js"></script>
-		</div>
 
-		<div id="select">
-			<br>
-			<a href="../index.html">Home</a>
-			<br>
-			<a>Previous</a>
-			<a href="tut1-2.html">Next</a>
+			<div id="ide">
+				Input <br>
+				<div id="input">
+					<button onclick="run()" class="btn btn-info">Run</button>
+					<br>
+					<textarea cols="80" rows="10" placeholder="code" value="" id="code"></textarea>
+				</div>
+
+				<br>
+				Output <br>
+				<div id="output">
+					<br>
+				</div>
+				<script src="../js/ide.js"></script>
+			</div>
+
+			<div id="select">
+				<br>
+				<a href="../index.html">Home</a>
+				<br>
+				<a>Previous</a>
+				<a href="tut1-2.html">Next</a>
+			</div>
 		</div>
 	</body>
 </html>

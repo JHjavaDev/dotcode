@@ -1,23 +1,17 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 body {
   font-family: Roboto Condensed;
   font-size: 16px;
-  text-align: center;
-  margin: auto;
   background: #000;
   color: #fff; }
   body h1 {
     font-family: Roboto; }
-  body #introduction {
-    transform: translate(50%, 0%);
-    width: 50%; }
-  body #instructions {
-    transform: translate(50%, 0%);
-    width: 50%; }
-  body #select {
-    transform: translate(50%, 0%);
-    width: 50%; }
+  body textarea {
+    color: #000;
+    font-family: monospace;
+    width: 80%; }
   body #input {
     transform: translate(50%, 0%);
     border-style: dotted;
@@ -32,9 +26,8 @@ body {
     height: 100%; }
 
 .code-example {
-  font-family: Monospace;
+  font-family: monospace;
   transform: translate(50%, 0%);
-  width: 50%;
   color: #999; }
 
 /*# sourceMappingURL=style.css.map */

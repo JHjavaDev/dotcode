@@ -6,54 +6,56 @@
 		<title>.code</title>
 	</head>
 	<body>
-		<div id="header">
-			<p>
-				<h1>Tutorial 1 - 2: Variables</h1>
-			</p>
-		</div>
+		<div class="container-fluid text-center">
+			<div id="header">
+				<p>
+					<h1>Tutorial 1 - 2: Variables</h1>
+				</p>
+			</div>
 
-		<div id="instructions">
-			<p>
-				Variables are a very powerful and important part of programing. Variables can store information. This is useful for a variety of uses such as storing the amount of money in a bank acount, solving mathematical equations or storing a players position in games.
-			</p>
-			<p>
-				In the .code language variables are declared using the <i class="code-example">variable</i> command. After the <i class="code-example">variable</i> command comes the name of the variable such as <i class="code-example">x</i> and then the value such as <i class="code-example">hello</i>.
-			</p>
-			<p>
-				The value that is inside of a variable can be accessed and used for another command like this: <i class="code-example">output (x)</i>.
-			</p>
-			<p>
-				Try it out by typing <i class="code-example">variable x hello</i> and on the next line <i class="code-example">output (x)</i>.
-			</p>
-			<p>
-				The output of this program should be "hello"
-			</p>
-		</div>
-
-		<br>
-
-		<div id="ide">
-			Input <br>
-			<div id="input">
-				<button onclick="run()">Run</button>
-				<br>
-				<textarea cols="80" rows="10" placeholder="code" value="" id="code"></textarea>
+			<div id="instructions">
+				<p>
+					Variables are a very powerful and important part of programing. Variables can store information. This is useful for a variety of uses such as storing the amount of money in a bank acount, solving mathematical equations or storing a players position in games.
+				</p>
+				<p>
+					In the .code language variables are declared using the <i class="code-example">variable</i> command. After the <i class="code-example">variable</i> command comes the name of the variable such as <i class="code-example">x</i> and then the value such as <i class="code-example">hello</i>.
+				</p>
+				<p>
+					The value that is inside of a variable can be accessed and used for another command like this: <i class="code-example">output (x)</i>.
+				</p>
+				<p>
+					Try it out by typing <i class="code-example">variable x hello</i> and on the next line <i class="code-example">output (x)</i>.
+				</p>
+				<p>
+					The output of this program should be "hello"
+				</p>
 			</div>
 
 			<br>
-			Output <br>
-			<div id="output">
-				<br>
-			</div>
-			<script src="../js/ide.js"></script>
-		</div>
 
-		<div id="select">
-			<br>
-			<a href="../index.html">Home</a>
-			<br>
-			<a href="tut1-1.html">Previous</a>
-			<a href="tut1-3.html">Next</a>
+			<div id="ide">
+				Input <br>
+				<div id="input">
+					<button onclick="run()" class="btn btn-info">Run</button>
+					<br>
+					<textarea cols="80" rows="10" placeholder="code" value="" id="code"></textarea>
+				</div>
+
+				<br>
+				Output <br>
+				<div id="output">
+					<br>
+				</div>
+				<script src="../js/ide.js"></script>
+			</div>
+
+			<div id="select">
+				<br>
+				<a href="../index.html">Home</a>
+				<br>
+				<a href="tut1-1.html">Previous</a>
+				<a href="tut1-3.html">Next</a>
+			</div>
 		</div>
 	</body>
 </html>
