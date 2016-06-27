@@ -2,12 +2,60 @@
 
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A website for learning the basics of programming">
+		<meta name="author" content="JHjavaDev">
+
 		<title>.code</title>
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 	</head>
 	<body>
 		<div class="container-fluid text-center">
 			<div id="header">
+				<nav class="navbar navbar-inverse navbar-fixed-top">
+					<div class="container">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="../index.html">.code</a>
+						</div>
+						<div id="navbar" class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li><a href="../index.html">Home</a></li>
+								<li><a href="sandbox.html">Sandbox</a></li>
+								<li class="active" class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tutorials<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li class="dropdown-header">Tutorials 1 - The Basics</li>
+										<li><a href="../html/tut1-1.html">Tutorial 1 - 1: Hello World</a></li>
+										<li><a href="../html/tut1-2.html">Tutorial 1 - 2: Variables</a></li>
+										<li><a href="../html/tut1-3.html">Tutorial 1 - 3: Addition</a></li>
+										<li><a href="../html/tut1-4.html">Tutorial 1 - 4: Other Math</a></li>
+										<li><a href="../html/tut1-5.html">Tutorial 1 - 5: Code Style / Syntax</a></li>
+										<li><a href="../html/tut1-challenge.html">Tutorial 1 - Challenge: Calculator</a></li>
+										<li role="separator" class="divider"></li>
+										<li class="dropdown-header">Tutorials 2 - Control Structure</li>
+										<li><a href="#">Coming Soon</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="tut1-5.html">Previous</a></li>
+								<li><a href="#">Next</a></li>
+							</ul>
+						</div><!--/.nav-collapse -->
+					</div>
+				</nav>
+				<br><br>
 				<p>
 					<h1>Tutorial 1 - Challenge: Calculator</h1>
 				</p>
@@ -41,7 +89,7 @@
 			<div id="ide">
 				Input <br>
 				<div id="input">
-					<button onclick="run()" class="btn btn-info">Run</button>
+					<button onclick="run()" class="btn btn-default">Run</button>
 					<br>
 					<textarea cols="80" rows="10" placeholder="code" value="" id="code"></textarea>
 				</div>
@@ -97,14 +145,10 @@
 				output (c)
 				<br>
 		    </div>
-
-			<div id="select">
-				<br>
-				<a href="../index.html">Home</a>
-				<br>
-				<a href="tut1-5.html">Previous</a>
-				<a>Next</a>
-			</div>
 		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="http://getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</body>
 </html>

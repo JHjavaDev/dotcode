@@ -1,29 +1,42 @@
-@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 body {
-  font-family: Roboto Condensed;
+  font-family: Roboto Condensed, sans-serif;
   font-size: 16px;
   background: #000;
   color: #fff; }
-  body h1 {
-    font-family: Roboto; }
-  body textarea {
-    color: #000;
-    font-family: monospace;
-    width: 80%; }
-  body #input {
-    transform: translate(50%, 0%);
-    border-style: dotted;
-    border-color: #fff;
-    width: 50%;
-    height: 100%; }
-  body #output {
-    transform: translate(50%, 0%);
-    border-style: dotted;
-    border-color: #fff;
-    width: 50%;
-    height: 100%; }
+
+h1, h2 {
+  color: #15f; }
+
+textarea {
+  color: #000;
+  font-family: monospace, sans-serif;
+  width: 80%; }
+
+a:link, a:visited, a:hover, a:active {
+  color: #14a; }
+
+#header {
+  font-family: Roboto, sans-serif;
+  color: #15f; }
+
+#input {
+  transform: translate(50%, 0%);
+  border-style: dotted;
+  border-color: #fff;
+  width: 50%;
+  height: 100%;
+  padding: 10px; }
+
+#output {
+  transform: translate(50%, 0%);
+  border-style: dotted;
+  border-color: #fff;
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  font-family: monospace, sans-serif; }
 
 .code-example {
   font-family: monospace;

@@ -1,44 +1,63 @@
-@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 $background-color: #000;
 $primary-color: #fff;
+$secondary-color: #15f;
+$tertiary-color: #14a;
 $code-color: #999;
 
 $font-size: 16px;
 
+$text-font: Roboto Condensed, sans-serif;
+$heading-font: Roboto, sans-serif;
+$code-font: monospace, sans-serif;
+
 body {
-	font-family: Roboto Condensed;
+	font-family: $text-font;
 	font-size: $font-size;
 	background: $background-color;
 	color: $primary-color;
-
-	h1 {
-		font-family: Roboto;
-	}
-
-	textarea {
-		color: #000;
-		font-family: monospace;
-		width: 80%;
-	}
-
-	#input {
-  		transform: translate(50%, 0%);
-		border-style: dotted;
-		border-color: $primary-color;
-		width: 50%;
-		height: 100%;
-	}
-	#output {
-  		transform: translate(50%, 0%);
-		border-style: dotted;
-		border-color: $primary-color;
-		width: 50%;
-		height: 100%;
-	}
 }
+
+h1, h2 {
+	color: $secondary-color;
+}
+
+textarea {
+	color: $background-color;
+	font-family: $code-font;
+	width: 80%;
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: $tertiary-color;
+}
+
+#header {
+	font-family: $heading-font;
+	color: $secondary-color;
+}
+
+#input {
+	transform: translate(50%, 0%);
+	border-style: dotted;
+	border-color: $primary-color;
+	width: 50%;
+	height: 100%;
+	padding: 10px;
+}
+
+#output {
+	transform: translate(50%, 0%);
+	border-style: dotted;
+	border-color: $primary-color;
+	width: 50%;
+	height: 100%;
+	padding: 10px;
+	font-family: $code-font;
+}
+
 
 .code-example {
 	font-family: monospace;

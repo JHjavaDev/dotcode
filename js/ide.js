@@ -7,7 +7,10 @@ function run() {
 
 	var lines = code.value.split("\n");
 
-	var variables = {};
+	var variables = {
+		dank: "memes",
+		what_is_love: "baby_don't_hurt_me"
+	};
 
 	for(var ip = 0; ip < lines.length; ip++) {
 		var line = lines[ip].split(" ");
