@@ -9,6 +9,7 @@ exception("Press \"Run\" to start the program");
 function run() {
 	variables = {};
 	output = "";
+	error = false;
 
 	var lines = code.value.trim().split(";");
 	lines.pop();
