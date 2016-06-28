@@ -1,78 +1,69 @@
 var code = document.getElementById("code");
 
-run();
+var variables = {};
+var output = "";
+var error = false;
+
+exception("Press \"Run\" to start the program");
 
 function run() {
-	var output = "";
+	variables = {};
+	output = "";
 
-	var lines = code.value.split("\n");
+	var lines = code.value.trim().split(";");
+	lines.pop();
 
-	var variables = {
-		dank: "memes",
-		what_is_love: "baby_don't_hurt_me"
-	};
-
-	for(var ip = 0; ip < lines.length; ip++) {
-		var line = lines[ip].split(" ");
-
-		if(line[0] == "output") {
-			if(line[1].charAt(0) == "(") {
-				var variable = line[1];
-				variable = variable.replace("(", "");
-				variable = variable.replace(")", "");
-				output = output.concat(variables[variable]);
-			} else {
-				output = output.concat(line[1]);
+	if (lines.length > 0) {
+		for (var i = 0; i < lines.length; i++) {
+			if (!error) {
+				var line = lines[i].trim().split("(");
+				interpretLine(line);
 			}
-		} else if(line[0] == "newline") {
-			output = output.concat("<br>");
-		} else if(line[0] == "variable") {
-			var variable = line[1];
-			var value = line[2];
-			variables[variable] = value;
-		} else if(line[0] == "add") {
-			var result = line[1];
-			result = result.replace("(", "");
-			result = result.replace(")", "");
-			var a = getVariableOrValue(line[2], variables);
-			var b = getVariableOrValue(line[3], variables);
-			variables[result] = Number(a) + Number(b);
-		} else if(line[0] == "subtract") {
-			var result = line[1];
-			result = result.replace("(", "");
-			result = result.replace(")", "");
-			var a = getVariableOrValue(line[2], variables);
-			var b = getVariableOrValue(line[3], variables);
-			variables[result] = Number(a) - Number(b);
 		}
-		 else if(line[0] == "multiply") {
-			var result = line[1];
-			result = result.replace("(", "");
-			result = result.replace(")", "");
-			var a = getVariableOrValue(line[2], variables);
-			var b = getVariableOrValue(line[3], variables);
-			variables[result] = Number(a) * Number(b);
-		}
-		 else if(line[0] == "divide") {
-			var result = line[1];
-			result = result.replace("(", "");
-			result = result.replace(")", "");
-			var a = getVariableOrValue(line[2], variables);
-			var b = getVariableOrValue(line[3], variables);
-			variables[result] = Number(a) / Number(b);
-		}
+	} else {
+		exception("Program has 0 lines of code");
 	}
-	variables = null;
+}
 
-	if(output == "") {
-		output = "<br>"
+function interpretLine(line) {
+	if (line.length == 1) {
+		exception("\"" + line + "\" is not a valid line of code");
+	}
+	var command = line[0].trim();
+	var args = line[1].trim();
+	args = args.replace("(", "");
+	args = args.replace(")", "");
+	args = args.split(",");
+	for (var i = 0; i < args.length; i++) {
+		args[i] = args[i].trim();
 	}
 
+	if(command == "output") {
+		if(args.length == 1) {
+			var line = args[0];
+			updateOutput(line);
+		} else {
+			exception("The command output requires exactly one argument");
+		}
+	} else if(command == "newline") {
+		updateOutput("<br>");
+	} else {
+		exception("\"" + command + "\" is not a valid command");
+	}
+}
+
+function updateOutput(text) {
+	output = output.concat(text);
 	document.getElementById("output").innerHTML = output;
 }
 
-function getVariableOrValue(value, variables) {
-	var ret = value;
+function exception(message) {
+	error = true;
+	document.getElementById("output").innerHTML = "<div style=\"color:red\">" + message + "</div>";
+}
+
+function getValue(value) {
+	var ret = value.trim();
 	if(ret.charAt(0) == "(") {
 		ret = ret.replace("(", "");
 		ret = ret.replace(")", "");
